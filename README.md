@@ -8,11 +8,11 @@ Continuing on my MNIST experiements, I ran into Multi Distribution issues while 
 
 I followed the architecture described above for the DM model. I trained this on VQ-VAE latents of MNIST dataset for 200 diffusion steps, 2 Nvidia V100 GPUs, Adam Optimizer with 2e-4 learning rate, 200 batch size per GPU for 100+ epochs. For the generative process, I denoised random samples for 50, 100 and 200 steps on the best performing model(112 epochs). Here are the results I achieved -
 
-![200 Diffusion Steps on MNIST](https://github.com/lb-97/dipy/blob/blog_branch_week5/doc/posts/2023/assets/DM-MNIST-112epoch.png)
+![200 Diffusion Steps on MNIST](https://github.com/lb-97/dipy/blob/blog_branch_week5/doc/_static/DM-MNIST-112epoch.png)
 
 We see some resembalnce of digit shapes in the generated outputs. On further training for 300 diffusion timesteps for the best performing model( 108 epochs) with least training loss, the visuals have improved drastically -
 
-![300 Diffusion Steps on MNIST](https://github.com/lb-97/dipy/blob/blog_branch_week5/doc/posts/2023/assets/DM-MNIST-DDIM300-108epoch.png)
+![300 Diffusion Steps on MNIST](https://github.com/lb-97/dipy/blob/blog_branch_week5/doc/_static/DM-MNIST-DDIM300-108epoch.png)
 
 These outputs show the effectiveness of the model architecture, training parameters and the codebase.
 
